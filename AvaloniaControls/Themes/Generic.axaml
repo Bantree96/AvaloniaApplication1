@@ -1,0 +1,16 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AvaloniaControls;assembly=AvaloniaControls">
+
+	<Style Selector="local|MyCustomControl">
+		<Setter Property="Template">
+			<ControlTemplate>
+				<StackPanel>
+					<TextBlock Text="{TemplateBinding Title}" FontSize="20"/>
+					<ContentPresenter/>
+				</StackPanel>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>
