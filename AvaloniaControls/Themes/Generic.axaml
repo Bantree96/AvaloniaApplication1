@@ -2,15 +2,25 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:AvaloniaControls;assembly=AvaloniaControls">
 
-	<Style Selector="local|MyCustomControl">
-		<Setter Property="Template">
-			<ControlTemplate>
-				<StackPanel>
-					<TextBlock Text="{TemplateBinding Title}" FontSize="20"/>
-					<ContentPresenter/>
-				</StackPanel>
-			</ControlTemplate>
-		</Setter>
-	</Style>
+        <Style Selector="local|MyCustomControl">
+                <Setter Property="Template">
+                        <ControlTemplate>
+                                <StackPanel>
+                                        <TextBlock Text="{TemplateBinding Title}" FontSize="20"/>
+                                        <ContentPresenter/>
+                                </StackPanel>
+                        </ControlTemplate>
+                </Setter>
+        </Style>
+
+        <Style Selector="local|TemplateControl">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <local:MyCustomControl Title="{TemplateBinding Title}">
+                        <ContentPresenter/>
+                    </local:MyCustomControl>
+                </ControlTemplate>
+            </Setter>
+        </Style>
 
 </ResourceDictionary>
